@@ -441,7 +441,7 @@ public:
 
   template <class Rep, class Period, class Predicate>
   bool wait(std::unique_lock<std::mutex>& lock, std::chrono::duration<Rep, Period> const& duration, Predicate pred) {
-    return cv_.wait_for(lock, duration, pred);
+    return cv_.wait_for(lock, duration, std::move(pred));
   }
 
   static int standardTreeSize(int workerSize) {
