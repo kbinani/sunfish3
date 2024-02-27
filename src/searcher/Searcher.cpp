@@ -463,6 +463,7 @@ void Searcher::after() {
 
   isRunning_.store(false);
   forceInterrupt_.store(false);
+  cv_.notify_all();
 }
 
 std::string Searcher::getInfoString() const {

@@ -132,6 +132,9 @@ private:
 
   Random random_;
 
+  /** isRunning_ が false に戻った時に通知するための cv */
+  std::condition_variable cv_;
+
   /**
    * 設定の初期化
    */
@@ -434,6 +437,11 @@ public:
   void searchTlp(int tid) {
     auto& tree = trees_[tid];
     searchTlp(tree);
+  }
+
+  template <class Rep, class Period, class Predicate>
+  bool wait(std::unique_lock<std::mutex>& lock, std::chrono::duration<Rep, Period> const& duration, Predicate pred) {
+    return cv_.wait_for(lock, duration, pred);
   }
 
   static int standardTreeSize(int workerSize) {
