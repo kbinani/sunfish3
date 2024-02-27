@@ -36,7 +36,9 @@
 #define ENABLE_PROBCUT_EXPT           0
 #define ENABLE_MATE_HIST_EXPT         0
 
-#define ENABLE_ROOT_MOVES_SHUFFLE     0
+#if !defined(ENABLE_ROOT_MOVES_SHUFFLE)
+#define ENABLE_ROOT_MOVES_SHUFFLE     1
+#endif
 
 // debugging flags
 #define DEBUG_ROOT_MOVES              0
