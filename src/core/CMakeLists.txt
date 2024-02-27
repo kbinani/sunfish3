@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8)
 
 project(sunfish CXX)
 
-add_library(core STATIC
+add_library(sunfish_core STATIC
 	base/Piece.cpp
 	base/Square.cpp
 	board/Bitboard.cpp

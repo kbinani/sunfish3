@@ -71,14 +71,14 @@ add_executable(sunfish
 	test/searcher/TreeTest.cpp
 )
 
-target_link_libraries(sunfish cui)
-target_link_libraries(sunfish learning)
-target_link_libraries(sunfish network)
-target_link_libraries(sunfish searcher)
-target_link_libraries(sunfish book)
-target_link_libraries(sunfish config)
-target_link_libraries(sunfish core)
-target_link_libraries(sunfish logger)
+target_link_libraries(sunfish sunfish_cui)
+target_link_libraries(sunfish sunfish_learning)
+target_link_libraries(sunfish sunfish_network)
+target_link_libraries(sunfish sunfish_searcher)
+target_link_libraries(sunfish sunfish_book)
+target_link_libraries(sunfish sunfish_config)
+target_link_libraries(sunfish sunfish_core)
+target_link_libraries(sunfish sunfish_logger)
 
 if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
 	target_link_libraries(sunfish wsock32)
