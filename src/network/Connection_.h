@@ -1,5 +1,5 @@
 /*
- * Connection.h
+ * Connection_.h
  */
 
 #ifndef SUNFISH_CONNECTION__

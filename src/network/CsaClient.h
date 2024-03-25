@@ -7,7 +7,7 @@
 
 #include "RemainingTime.h"
 #include "config/Config.h"
-#include "Connection.h"
+#include "Connection_.h"
 #include "logger/Logger.h"
 #include "core/record/Record.h"
 #include "core/util/StringUtil.h"

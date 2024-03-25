@@ -2,7 +2,7 @@
  * Connection.cpp
  */
 
-#include "Connection.h"
+#include "Connection_.h"
 #include <string.h>
 
 #if WIN32
